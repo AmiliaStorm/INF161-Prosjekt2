@@ -1,0 +1,164 @@
+
+<!DOCTYPE html>
+<html lang="no">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>INF161 | Modellsammenligning</title>
+<style>
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  background: #07131b;
+  color: #f0fff9;
+  font-family: Inter, Arial, sans-serif;
+}
+.slide {
+  min-height: 100vh;
+  padding: 7vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: radial-gradient(
+    ellipse at 80% 15%, #16443e, transparent 55%
+  );
+  border-bottom: 1px solid #24554e;
+}
+.label {
+  color: #79f4c6;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+}
+h1 {
+  font-size: clamp(40px, 6vw, 76px);
+  max-width: 950px;
+  margin: 20px 0;
+}
+p {
+  max-width: 900px;
+  font-size: clamp(19px, 2.2vw, 27px);
+  line-height: 1.5;
+  color: #bfd9d0;
+}
+.stats {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-top: 35px;
+}
+.stat {
+  min-width: 210px;
+  padding: 28px;
+  background: #12352e;
+  border: 1px solid #327362;
+  border-radius: 20px;
+}
+.stat b {
+  font-size: 38px;
+  display: block;
+  color: #89ffcb;
+}
+.stat span { color: #badacd; }
+nav { margin-top: 45px; }
+nav a {
+  display: inline-block;
+  margin-right: 12px;
+  padding: 13px 22px;
+  border-radius: 12px;
+  background: #1d5045;
+  color: white;
+  text-decoration: none;
+}
+nav a:hover { background: #287766; }
+</style>
+</head>
+
+<body>
+
+<section class="slide" id="s1">
+  <div class="label">INF161 · Tema 3</div>
+  <h1>Random Forest vs. Gradient Boosting.</h1>
+  <p>
+    Hvilken modell presterte best,
+    og hvorfor?
+  </p>
+  <nav><a href="#s2">Neste →</a></nav>
+</section>
+
+<section class="slide" id="s2">
+  <div class="label">Modeller</div>
+  <h1>Tre tilnærminger til prediksjon.</h1>
+  <p>
+    <strong>Baseline:</strong> En enkel referansemodell.
+  </p>
+  <p>
+    <strong>Random Forest:</strong> Kombinerer mange
+    beslutningstrær.
+  </p>
+  <p>
+    <strong>Gradient Boosting:</strong> Bygger trær
+    sekvensielt for å redusere tidligere feil.
+  </p>
+  <nav>
+    <a href="#s1">← Forrige</a>
+    <a href="#s3">Neste →</a>
+  </nav>
+</section>
+
+<section class="slide" id="s3">
+  <div class="label">Regresjon</div>
+  <h1>Random Forest ga best valideringsresultat.</h1>
+  <p>
+    Modellen ble valgt basert på gjennomsnittlig
+    absolutt feil, MAE, på valideringssettet.
+  </p>
+  <div class="stats">
+    <div class="stat"><b>371,125</b><span>MAE – validering</span></div>
+    <div class="stat"><b>381,77</b><span>MAE – test</span></div>
+    <div class="stat"><b>0,30</b><span>R² – test</span></div>
+  </div>
+  <nav>
+    <a href="#s2">← Forrige</a>
+    <a href="#s4">Neste →</a>
+  </nav>
+</section>
+
+<section class="slide" id="s4">
+  <div class="label">Klassifikasjon</div>
+  <h1>Accuracy forteller ikke hele historien.</h1>
+  <div class="stats">
+    <div class="stat"><b>55,4 %</b><span>Accuracy – test</span></div>
+    <div class="stat"><b>0,332</b><span>Macro-F1 – test</span></div>
+    <div class="stat"><b>37,8 %</b><span>Baseline – validering</span></div>
+  </div>
+  <p>
+    Macro-F1 viser at klassifikasjonsmodellen
+    presterer ulikt på forskjellige yrkeskategorier.
+  </p>
+  <nav>
+    <a href="#s3">← Forrige</a>
+    <a href="#s5">Neste →</a>
+  </nav>
+</section>
+
+<section class="slide" id="s5">
+  <div class="label">Konklusjon</div>
+  <h1>Den beste modellen er ikke nødvendigvis den mest avanserte.</h1>
+  <p>
+    Random Forest presterte best i våre sammenligninger.
+    Den kan fange opp ikke-lineære mønstre og
+    samspill mellom variabler.
+  </p>
+  <p>
+    Likevel viser både MAE og macro-F1 at
+    resultatene har tydelige begrensninger.
+  </p>
+  <nav>
+    <a href="#s4">← Forrige</a>
+    <a href="../">Tilbake til temaene ↗</a>
+  </nav>
+</section>
+
+</body>
+</html>
