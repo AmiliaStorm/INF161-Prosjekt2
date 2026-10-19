@@ -1,0 +1,159 @@
+
+<!DOCTYPE html>
+<html lang="no">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>INF161 | Overraskende resultat</title>
+<style>
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  background: #080e1d;
+  color: #f2f6ff;
+  font-family: Inter, Arial, sans-serif;
+}
+.slide {
+  min-height: 100vh;
+  padding: 7vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: radial-gradient(
+    ellipse at 80% 15%, #223661, transparent 55%
+  );
+  border-bottom: 1px solid #273956;
+}
+.label {
+  color: #80e5ff;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+}
+h1 {
+  font-size: clamp(40px, 6vw, 76px);
+  max-width: 950px;
+  margin: 20px 0;
+}
+p {
+  font-size: clamp(19px, 2.2vw, 27px);
+  line-height: 1.5;
+  color: #bdc9e0;
+  max-width: 850px;
+}
+strong { color: #91e8ff; }
+.stats {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-top: 35px;
+}
+.stat {
+  background: #182640;
+  padding: 28px;
+  border: 1px solid #425879;
+  border-radius: 20px;
+  min-width: 200px;
+}
+.stat b {
+  font-size: 42px;
+  display: block;
+}
+.stat span { color: #adbed7; }
+nav { margin-top: 45px; }
+nav a {
+  display: inline-block;
+  margin-right: 12px;
+  padding: 13px 22px;
+  background: #22395b;
+  color: white;
+  border-radius: 12px;
+  text-decoration: none;
+}
+nav a:hover { background: #385b8a; }
+</style>
+</head>
+
+<body>
+
+<section class="slide" id="s1">
+  <div class="label">INF161 · Tema 1</div>
+  <h1>Kan verdier fortelle oss når et menneske ble født?</h1>
+  <p>
+    Det mest overraskende resultatet fra
+    maskinlæringsanalysen.
+  </p>
+  <div class="stats">
+    <div class="stat"><b>9 000</b><span>Analyserte personer</span></div>
+    <div class="stat"><b>11</b><span>Valgte variabler</span></div>
+  </div>
+  <nav><a href="#s2">Neste →</a></nav>
+</section>
+
+<section class="slide" id="s2">
+  <div class="label">Forventning</div>
+  <h1>Jeg forventet svake resultater.</h1>
+  <p>
+    Datasettet dekker svært ulike historiske perioder.
+    Holdninger og verdier er dessuten subjektive og
+    vanskelige å dokumentere historisk.
+  </p>
+  <nav>
+    <a href="#s1">← Forrige</a>
+    <a href="#s3">Neste →</a>
+  </nav>
+</section>
+
+<section class="slide" id="s3">
+  <div class="label">Resultat</div>
+  <h1>Random Forest slo baseline.</h1>
+  <div class="stats">
+    <div class="stat"><b>412,14</b><span>Baseline MAE – år</span></div>
+    <div class="stat"><b>381,77</b><span>Random Forest MAE – år</span></div>
+    <div class="stat"><b>0,30</b><span>R² på testsettet</span></div>
+  </div>
+  <p>
+    Modellen reduserte gjennomsnittlig absolutt feil
+    med omtrent <strong>30 år</strong>.
+  </p>
+  <nav>
+    <a href="#s2">← Forrige</a>
+    <a href="#s4">Neste →</a>
+  </nav>
+</section>
+
+<section class="slide" id="s4">
+  <div class="label">Variabelviktighet</div>
+  <h1>Hvilke variabler bidro mest?</h1>
+  <p>
+    Selvrapportert IQ, ønske om evig liv,
+    tradisjonelle verdier og gudstro var blant
+    variablene med høyest permutasjonsviktighet.
+  </p>
+  <p>
+    Dette beskriver modellens mønstre,
+    ikke nødvendigvis årsakssammenhenger.
+  </p>
+  <nav>
+    <a href="#s3">← Forrige</a>
+    <a href="#s5">Neste →</a>
+  </nav>
+</section>
+
+<section class="slide" id="s5">
+  <div class="label">Konklusjon</div>
+  <h1>Et signal er ikke det samme som en sikker forklaring.</h1>
+  <p>
+    Random Forest fant mønstre som forbedret
+    prediksjonene, men feilen var fortsatt stor.
+    Historisk usikkerhet og datakvalitet begrenser
+    hvilke konklusjoner vi kan trekke.
+  </p>
+  <nav>
+    <a href="#s4">← Forrige</a>
+    <a href="../">Tilbake til temaene ↗</a>
+  </nav>
+</section>
+
+</body>
+</html>
